@@ -46,7 +46,7 @@ namespace Game.InputLogic
                 }
             }
 
-            if(touchStartPosition == touchEndPosition)
+            if(touchStartPosition == touchEndPosition && touchStartPosition != Vector2.zero)
             {
                 direction = new Vector2(touchStartPosition.x - Screen.width / 2, 0);
                 if (Mathf.Abs(direction.x) <= movingTreshold)

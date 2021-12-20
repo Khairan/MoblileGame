@@ -7,7 +7,7 @@ namespace Game.InputLogic
 {
     internal class InputGameController : BaseController
     {
-        private readonly ResourcePath _viewPath = new ResourcePath { PathResource = "Prefabs/MobileSingleStickControl" };
+        private readonly ResourcePath _viewPath = new ResourcePath { PathResource = "Prefabs/TappingMove" };
         private BaseInputView _view;
 
         public InputGameController(SubscriptionProperty<float> leftMove, SubscriptionProperty<float> rightMove, Car car)

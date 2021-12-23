@@ -9,12 +9,14 @@ namespace Profile
         public SubscriptionProperty<GameState> CurrentState { get; }
         public Car CurrentCar { get; }
         public IAnalyticTools AnalyticTools { get; }
+        public IAdsShower AdsShower { get; }
 
-        public ProfilePlayer(float speedCar, IAnalyticTools analyticTools)
+        public ProfilePlayer(float speedCar, UnityAdsTools unityAdsTools)
         {
             CurrentState = new SubscriptionProperty<GameState>();
             CurrentCar = new Car(speedCar);
-            AnalyticTools = analyticTools;
+            AnalyticTools = new UnityAnalyticTools();
+            AdsShower = unityAdsTools;
         }
     }
 }

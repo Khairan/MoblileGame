@@ -14,5 +14,10 @@ namespace Tools
         {
             return Resources.Load<GameObject>(path.PathResource);
         }
+
+        public static UpgradeItemConfigDataSource LoadConfig(ResourcePath path)
+        {
+            return Resources.Load<UpgradeItemConfigDataSource>(path.PathResource);
+        }
     }
 }

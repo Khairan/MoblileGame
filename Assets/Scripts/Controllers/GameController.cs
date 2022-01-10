@@ -1,5 +1,6 @@
 using Game.InputLogic;
 using Profile;
+using System.Linq;
 using Tools;
 
 internal class GameController : BaseController
@@ -17,5 +18,9 @@ internal class GameController : BaseController
 
         var carController = new CarController();
         AddController(carController);
+
+        var _configsPath = new ResourcePath { PathResource = "DataSource/Upgrades/UpgradeItemConfigDataSource" };
+        var shedController = new ShedController(ResourceLoader.LoadConfig(_configsPath).itemConfigs.ToList(), profilePlayer.CurrentCar);
+        AddController(shedController);
     }
 }
